@@ -3,3 +3,4 @@
 - GAN framework
 - encoder decoder
 - sequence to sequence model
+- different training techniques
