@@ -4,3 +4,4 @@
 - encoder decoder
 - sequence to sequence model
 - different training techniques
+- result comparison
