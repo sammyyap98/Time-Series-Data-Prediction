@@ -6,3 +6,4 @@
 - different training techniques
 - result comparison
 - accuracy, model complexity, inference time
+- user path/trajectory
