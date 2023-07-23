@@ -16,7 +16,7 @@ def build_discriminator(self):
             model.add(GRU(256, return_sequences=True, kernel_initializer="normal"))
         if use_cell == 2:
             model.add(LSTM(256, return_sequences=True, kernel_initializer="normal"))
-
+    # multiple dense layer
     model.add(Dense(512, activation="tanh", kernel_initializer="normal"))
     model.add(Dense(256, activation="tanh", kernel_initializer="normal"))
     model.add(Dense(128, activation="tanh", kernel_initializer="normal"))
