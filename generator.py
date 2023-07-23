@@ -12,7 +12,7 @@ set_attention = True
 def build_generator(self):
     encoder_inputs = Input(shape=(self.data_rows, self.data_cols), name='encoder_inputs')
 
-    if use_cell == 1:
+    if use_cell == 1: #bidirectional GRU
         encoder_gru = Bidirectional(GRU(latent_dim, kernel_initializer="normal", return_sequences=True, return_state=True, name='encoder_gru'))
         encoder_outputs, forward_state_h, backward_state_h = encoder_gru(encoder_inputs)
         state_h = Concatenate()([forward_state_h, backward_state_h])
@@ -22,7 +22,7 @@ def build_generator(self):
         decoder_gru = Bidirectional(GRU(latent_dim, return_state=True, name='decoder_gru'))
         decoder_dense = Dense(self.poa_num, activation='softmax',  name='decoder_dense')
 
-    if use_cell == 2:
+    if use_cell == 2: #bidirectional LSTM
         encoder_lstm = Bidirectional(LSTM(latent_dim, kernel_initializer="normal", return_sequences=True, return_state=True, name='encoder_lstm'))
         encoder_outputs, forward_state_h, forward_state_c, backward_state_h, backward_state_c = encoder_lstm(encoder_inputs)
         state_h = Concatenate()([forward_state_h, backward_state_h])
