@@ -10,12 +10,14 @@ disc_input_mul = 2
 def build_discriminator(self):
     model = Sequential()
     model.add(Reshape((disc_input_mul*(self.data_rows + self.target_data_rows), self.data_cols), input_shape=self.combined_shape))
-
+    
+    # additional rnn layer
     if rnn_layer_discriminator:
         if use_cell == 1:
             model.add(GRU(256, return_sequences=True, kernel_initializer="normal"))
         if use_cell == 2:
             model.add(LSTM(256, return_sequences=True, kernel_initializer="normal"))
+    
     # multiple dense layer
     model.add(Dense(512, activation="tanh", kernel_initializer="normal"))
     model.add(Dense(256, activation="tanh", kernel_initializer="normal"))
