@@ -9,6 +9,7 @@ latent_dim = 256
 use_cell = 1
 set_attention = True
 
+# build generator
 def build_generator(self):
     encoder_inputs = Input(shape=(self.data_rows, self.data_cols), name='encoder_inputs')
 
