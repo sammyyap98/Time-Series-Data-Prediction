@@ -8,7 +8,7 @@
 - accuracy, model complexity, inference time 
 - user path/trajectory 
 - user mobility 
-- different training techniques
+- different training techniques 
 - time-series datasets
 - attention
   
