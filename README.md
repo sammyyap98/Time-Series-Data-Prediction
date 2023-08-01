@@ -9,6 +9,6 @@
 - user path/trajectory 
 - user mobility 
 - different training techniques 
-- time-series datasets
+- time-series datasets 
 - attention
   
