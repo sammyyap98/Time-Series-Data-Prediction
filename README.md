@@ -1,6 +1,6 @@
 # Time-Series-Data-Prediction                 
 - time series data prediction          
-- GAN framework       
+- GAN framework        
 - encoder decoder  
 - sequence to sequence model  
 - different training techniques  
