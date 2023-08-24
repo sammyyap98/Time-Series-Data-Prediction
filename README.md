@@ -4,7 +4,7 @@
 - encoder decoder           
 - sequence to sequence model      
 - different training techniques  
-- result comparison 
+- result comparison  
 - accuracy, model complexity, inference time 
 - user path/trajectory 
 - user mobility 
